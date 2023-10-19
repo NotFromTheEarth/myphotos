@@ -1,0 +1,9 @@
+.onePost{
+    text-align: center;
+    width: 95%;
+    height: fit-content;
+    background-color: var(--postBackgroundColor);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+}
