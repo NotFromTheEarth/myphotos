@@ -13,8 +13,18 @@
         $photo = "img/1.JPG";
     }
 
-    $text = "textinho bonito 2";
+    list($width, $height) = getimagesize($photo);
+    $orientation = GetOrientation($width, $height);
+    
+    $text = "1/45";
     $rotation = 0;
+    
+
+    function GetOrientation($width, $height)
+    {
+        if($width > $height) return "myImageWide";
+        else return "myImageNarrow";
+    }
 ?>
 
 <!DOCTYPE html>

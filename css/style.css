@@ -31,16 +31,22 @@ a{
     align-items: center;
 }
 
-.myImage{
+.MyImage{
+    -webkit-box-shadow: 0px 0px 20px 18px rgba(255,255,255,0.15);
+    -moz-box-shadow: 0px 0px 20px 18px rgba(255,255,255,0.15);
+    box-shadow: 0px 0px 20px 18px rgba(255,255,255,0.15);
+}
+
+.myImageWide{
     object-fit: contain;
     max-width: 100%;
     max-height: 100%;
     width: auto;
     height: auto;
+}
 
-    -webkit-box-shadow: 0px 0px 20px 18px rgba(255,255,255,0.15);
-    -moz-box-shadow: 0px 0px 20px 18px rgba(255,255,255,0.15);
-    box-shadow: 0px 0px 20px 18px rgba(255,255,255,0.15);
+.myImageNarrow{
+
 }
 
 .myTexts{
