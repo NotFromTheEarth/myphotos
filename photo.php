@@ -1,14 +1,15 @@
 <?php
+    $total = 0;
     if(isset($_GET['index']))
     {
         $folderFotos = ["img/1.JPG", "img/2.JPG", "img/3.JPG", "img/4.JPG", "img/5.JPG"];
+        $total = count($folderFotos);
         $index = $_GET['index'];
         $photo = $folderFotos[$index];
     }
     else
     {
-        $index = 0;
-        $total = 0;
+        $index = 1;
         $folder = "nenhuma pasta";
         $photo = "img/1.JPG";
     }
@@ -16,10 +17,9 @@
     list($width, $height) = getimagesize($photo);
     $orientation = GetOrientation($width, $height);
     
-    $text = "1/45";
+    $text = $index . "/" . $total;
     $rotation = 0;
     
-
     function GetOrientation($width, $height)
     {
         if($width > $height) return "myImageWide";
@@ -35,15 +35,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="css/colors.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">  
+    <link href="css/style.css" rel="stylesheet">
 </head>
     <title>Document</title>
 </head>
 <body>
-    
     <div class="myBody">
         <div class="myImageContainer">
-            <img id="mainImage" class="myImage rotate" src="<?php echo $photo ?>"><br>
+            <img id="mainImage" class="myImage rotate <?php echo $orientation ?>" src="<?php echo $photo ?>"><br>
         </div>
         <div class="myTexts">
             <h2><?php echo $text ?></h2>
