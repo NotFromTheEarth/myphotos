@@ -36,6 +36,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="css/colors.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/photo.css" rel="stylesheet">
 </head>
     <title>Document</title>
 </head>
