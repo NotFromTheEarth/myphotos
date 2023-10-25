@@ -9,7 +9,13 @@
     {
         for($i = 0; $i < count($folders); $i++)
         {
-            
+            echo
+            '<button type="button" class="btn btn-light myButton" onclick="Folder()">
+                <i class="bi bi-folder"></i>
+             </button>
+             '. $folders[$i] .
+             '<br>
+            ';
         }
     }
 ?>
@@ -26,6 +32,6 @@
     <link href="css/folders.css" rel="stylesheet">
 </head>
 <body>
-    <button type="button" class="btn btn-light myButton" onclick="Folder()"><i class="bi bi-folder"></i></i></button>
+    <?php EchoFolders($folders) ?>
 </body>
 </html>
